@@ -1,0 +1,61 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int  main()
+{
+int x,y,flames=0;
+	char s1[20]={"naveen"};
+char s2[30]={"swapna"};
+
+	x=strlen(s1);
+	y=strlen(s2);
+	for(int i=0;i<x;i++)
+	{
+		for(int j=0;j<y;j++)
+	  {
+  	if(s1[i]==s2[j])
+	{
+		s1[i]='@';
+		s2[j]='@';
+		break;
+	}
+	}}
+	
+	for(int i=0;i<x;i++)
+	if(isalpha(s1[i]))
+	flames=flames+1;
+	for(int i=0;i<y;i++)
+	if(isalpha(s2[i]))
+	flames=flames+1;
+	cout<<flames;
+	
+char f[7]="flames";
+	int n=flames,k=0,l=0;
+	for(int i=0;i<10;i++)
+	{
+		if(isalpha(f[i]))
+		{
+		k++;
+	
+		if(k==n)
+		{k=0;
+		 f[i]='@';
+		 l++;
+		 
+		 if(l==5)
+		 break;
+		 }
+		 }
+		 if(i==5)
+		 i=-1;
+	}
+	char ch;
+	for(int i=0;i<7;i++)
+	{
+		if(isalpha(f[i]))
+		ch=f[i];
+	}
+	cout<<"\n"<<ch;
+return 0;
+}
+    
